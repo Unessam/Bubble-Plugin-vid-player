@@ -1,0 +1,203 @@
+{
+    "add_is_visible": true,
+    "can_fit_height": true,
+    "can_fit_width": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 200,
+        "width": 400
+    },
+    "display": "video player",
+    "events": {
+        "AAU": {
+            "caption": "reached the end of the media resource (currentTime == duration)",
+            "doc": "Fires on finish ( end of the media resource)",
+            "name": "ended"
+        },
+        "AAV": {
+            "caption": "has started or resumed",
+            "doc": "Fires on play (started or resumed)",
+            "name": "play"
+        },
+        "AAW": {
+            "caption": "has been paused",
+            "doc": "Fires on pause",
+            "name": "pause"
+        },
+        "AAX": {
+            "caption": "starts a cue",
+            "doc": "Fires with a cue starts (id of the cue is state active_cue).",
+            "name": "cue_start"
+        },
+        "AAY": {
+            "caption": "stops a cue",
+            "doc": "Fires with cue ends",
+            "name": "cue_stop"
+        },
+        "AAZ": {
+            "caption": "timed_event",
+            "doc": "Fired the timed event as set in Bubble (% of film duration).",
+            "name": "timed_event"
+        }
+    },
+    "fields": {
+        "AAD": {
+            "caption": "video_file",
+            "doc": "video file",
+            "editor": "DynamicValue",
+            "name": "video_file",
+            "optional": true,
+            "rank": 0,
+            "value": "file"
+        },
+        "AAE": {
+            "caption": "video_url",
+            "doc": "Youtube, vimeo, wistia, etc",
+            "editor": "DynamicValue",
+            "name": "video_url",
+            "optional": true,
+            "rank": 1,
+            "value": "text"
+        },
+        "AAF": {
+            "caption": "poster",
+            "doc": "Poster image, displayed before video plays.",
+            "editor": "DynamicValue",
+            "name": "poster",
+            "optional": true,
+            "rank": 2,
+            "value": "image"
+        },
+        "AAG": {
+            "caption": "Show controls",
+            "default_val": true,
+            "doc": "Show controls?",
+            "editor": "Checkbox",
+            "name": "controls",
+            "rank": 3
+        },
+        "AAH": {
+            "caption": "Autoplay",
+            "default_val": false,
+            "doc": "Autoplay?",
+            "editor": "Checkbox",
+            "name": "autoplay",
+            "rank": 4
+        },
+        "AAI": {
+            "caption": "Start muted",
+            "default_val": true,
+            "doc": "Start muted?",
+            "editor": "Checkbox",
+            "name": "muted",
+            "rank": 5
+        },
+        "AAJ": {
+            "caption": "Fluid fill",
+            "default_val": false,
+            "doc": "Fill element container?",
+            "editor": "Checkbox",
+            "name": "fluid",
+            "rank": 6
+        },
+        "AAK": {
+            "caption": "Video.js skin file",
+            "doc": "load a custom css file",
+            "editor": "DynamicValue",
+            "name": "skin_file",
+            "optional": true,
+            "rank": 7,
+            "value": "file"
+        },
+        "AAL": {
+            "caption": "Preload",
+            "default_val": "Auto",
+            "doc": "Preload video?",
+            "editor": "Dropdown",
+            "name": "preload",
+            "optional": true,
+            "options": "Auto,Metadata,None",
+            "rank": 8
+        },
+        "AAM": {
+            "caption": "timed_cue-event",
+            "doc": "List of start time to trigger event during playing. (value in s)",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "timed_cue-event",
+            "optional": true,
+            "rank": 9,
+            "value": "number"
+        }
+    },
+    "icon": "ion-android-checkbox-blank",
+    "property_applications": {
+        "Border": true,
+        "MinWidth": true,
+        "Padding": true,
+        "resizable": true
+    },
+    "states": {
+        "AAN": {
+            "caption": "current_time",
+            "doc": "Current time in seconds",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\nreturn 0;\n\n}"
+            },
+            "name": "current_time",
+            "value": "number"
+        },
+        "AAO": {
+            "caption": "remaining_time",
+            "doc": "Remaining time in seconds",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\nreturn 0;\n\n}"
+            },
+            "name": "remaining_time",
+            "value": "number"
+        },
+        "AAP": {
+            "caption": "Duration",
+            "doc": "Duration in seconds (set during play action).",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\nreturn 0;\n\n}"
+            },
+            "name": "duration_time",
+            "value": "number"
+        },
+        "AAQ": {
+            "caption": "status",
+            "doc": "running, pause",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\nreturn \"stopped\";\n\n}"
+            },
+            "name": "status",
+            "value": "text"
+        },
+        "AAR": {
+            "caption": "last_timed_event",
+            "doc": "Value of the timed event.",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\nreturn 0;\n\n}"
+            },
+            "name": "last_timed_event",
+            "value": "number"
+        },
+        "AAS": {
+            "caption": "ratio_played",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "ratio_played",
+            "value": "number"
+        },
+        "AAT": {
+            "caption": "active_cue",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "active_cue",
+            "value": "text"
+        }
+    }
+}

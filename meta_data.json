@@ -1,0 +1,11 @@
+{
+    "categories": {
+        "0": "media",
+        "1": "social network",
+        "2": "technical",
+        "3": "mobile",
+        "4": "video"
+    },
+    "description": "This is a fork of the Responsive VideoJS player plugin. This fork supports inlineplay.",
+    "name": "vid player"
+}
