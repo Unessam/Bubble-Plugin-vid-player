@@ -7,5 +7,6 @@
         "4": "video"
     },
     "description": "This is a fork of the Responsive VideoJS player plugin. This fork supports inlineplay.",
+    "license": "private",
     "name": "vid player"
 }
