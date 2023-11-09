@@ -7,6 +7,7 @@
         "4": "video"
     },
     "description": "This is a fork of the Responsive VideoJS player plugin. This fork supports inlineplay.",
+    "image": "//meta-q.cdn.bubble.io/f1699552577548x517713418848303700/logo.png",
     "license": "private",
-    "name": "vid player"
+    "name": "Traviz video player"
 }

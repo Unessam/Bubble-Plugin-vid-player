@@ -1,9 +1,9 @@
 function(instance, context) {
-
     // Generate a random ID for the element and add the video.js div
     var randomId = Math.floor((Math.random() * 100000) + 1);
     var elementId = 'vjsElement_' + randomId;
-    instance.canvas.append("<div style='width:100%;height:100%'><video id='" + elementId + "' class='video-js' style='width:100%!important;height:100%!important;'></video></div>");
+    // Add 'playsinline' attribute to the video tag to prevent automatic fullscreen on mobile devices
+    instance.canvas.append("<div style='width:100%;height:100%'><video id='" + elementId + "' class='video-js' playsinline style='width:100%!important;height:100%!important;'></video></div>");
     instance.data.elementId = elementId;
 
     // Include CSS file
